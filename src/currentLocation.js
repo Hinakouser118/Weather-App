@@ -63,6 +63,7 @@ class Weather extends React.Component {
       this.getPosition()
         //If user allow location service then will fetch data & send it to get-weather function.
         .then((position) => {
+          // console.log(position)
           this.getWeather(position.coords.latitude, position.coords.longitude);
         })
         .catch((err) => {
